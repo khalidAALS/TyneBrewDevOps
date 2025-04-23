@@ -20,13 +20,14 @@ jobs:
       - name: Build Docker images
         run: docker compose build
 
-      - name: Run Containers for Testing
+      - name: Start containers
         run: docker compose up -d
 
-      - name: Basic smoke test
-        run: |
-          sleep 15
-          curl --fail http://localhost:8080 || exit 1
+      - name: Wait for services to be ready
+        run: sleep 15
+
+      - name: Run full PHP test suite
+        run: docker compose exec web php /var/www/html/tests/full_test_suite.php
 
       - name: Stop containers
         run: docker compose down
