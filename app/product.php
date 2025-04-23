@@ -51,7 +51,7 @@ try {
     <!-- page metadata and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Products</title>
+    <title>Our Range</title>
     <link rel="stylesheet" href="style.css">
     <script>
         // toggle visability for product descriptions

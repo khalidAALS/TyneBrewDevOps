@@ -12,6 +12,7 @@ $conn = $db->connect();
 $query = "SELECT DISTINCT category, image_url FROM TblProducts";
 $result = $conn->query($query); 
 ?>
+TyneBrew
 
 <!DOCTYPE html>
 <html lang="en">
