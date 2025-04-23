@@ -3,10 +3,10 @@ function testPageLoads($path) {
     $url = "http://localhost" . $path;
     $output = @file_get_contents($url);
     if ($output === false) {
-        echo "❌ Failed to load $path\n";
+        echo "Failed to load $path\n";
         return false;
     } else {
-        echo "✅ $path loaded successfully\n";
+        echo "$path loaded successfully\n";
         return true;
     }
 }
@@ -15,10 +15,10 @@ function testPageContains($path, $expected) {
     $url = "http://localhost" . $path;
     $output = @file_get_contents($url);
     if (strpos($output, $expected) !== false) {
-        echo "✅ $path contains expected text: '$expected'\n";
+        echo "$path contains expected text: '$expected'\n";
         return true;
     } else {
-        echo "❌ $path does not contain expected text: '$expected'\n";
+        echo "$path does not contain expected text: '$expected'\n";
         return false;
     }
 }
@@ -27,16 +27,16 @@ function testPageContains($path, $expected) {
 $results = [];
 
 $results[] = testPageLoads("/");
-$results[] = testPageLoads("/products.php");
+$results[] = testPageLoads("/product.php");
 $results[] = testPageContains("/", "TyneBrew");
-$results[] = testPageContains("/products.php", "Our Range");
+$results[] = testPageContains("/product.php", "Our Products");
 
 // Final result
 $failed = array_filter($results, fn($r) => !$r);
 if (count($failed) > 0) {
-    echo "\n❌ One or more tests failed.\n";
+    echo "\nOne or more tests failed.\n";
     exit(1);
 } else {
-    echo "\n✅ All tests passed.\n";
+    echo "\nAll tests passed.\n";
     exit(0);
 }
