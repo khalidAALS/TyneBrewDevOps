@@ -51,7 +51,7 @@ try {
     <!-- page metadata and responsive design -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Range</title>
+    <title>Our Products</title>
     <link rel="stylesheet" href="style.css">
     <script>
         // toggle visability for product descriptions
@@ -91,6 +91,9 @@ try {
     </script>
 </head>
 <body>
+<body>
+    <h1>Our Products</h1>
+
     <!-- page header section -->
     <header>
         <h1>Tyne Brew Coffee - Product Range</h1>
