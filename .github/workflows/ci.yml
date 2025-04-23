@@ -18,10 +18,10 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build Docker images
-        run: docker-compose build
+        run: docker compose build
 
       - name: Run Containers for Testing
-        run: docker-compose up -d
+        run: docker compose up -d
 
       - name: Basic smoke test
         run: |
@@ -29,4 +29,4 @@ jobs:
           curl --fail http://localhost:8080 || exit 1
 
       - name: Stop containers
-        run: docker-compose down
+        run: docker compose down
