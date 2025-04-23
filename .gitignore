@@ -1,0 +1,17 @@
+# ingores sensitive and local files
+README.md
+*.sql
+
+# ignores Docker volumes/data
+db-data/
+
+# ignores common OS/system files
+.DS_Store
+Thumbs.db
+
+# ignores IDE specific files
+.vscode/
+.idea/
+
+# ignores Docker specific files that shouldn't be tracked
+docker-compose.override.yml

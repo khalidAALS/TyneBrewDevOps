@@ -1,0 +1,3 @@
+<?php
+header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://unpkg.com https://cdn.jsdelivr.net https://ajax.googleapis.com https://unpkg.com/leaflet@1.7.1/dist/leaflet.js; style-src 'self' 'unsafe-inline' https://unpkg.com https://fonts.googleapis.com; img-src 'self' data: https://*.tile.openstreetmap.org https://*.gstatic.com https://cdn.jsdelivr.net; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://*.openstreetmap.org https://ajax.googleapis.com; object-src 'none'; frame-src 'self' https://*.google.com https://*.googleapis.com; form-action 'self'; base-uri 'self';");
+?>
