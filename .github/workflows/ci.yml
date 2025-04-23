@@ -26,6 +26,9 @@ jobs:
       - name: Wait for services to be ready
         run: sleep 15
 
+      - name: List container contents for debug
+        run: docker compose exec web ls -R /var/www/html/
+
       - name: Run full PHP test suite
         run: docker compose exec web php /var/www/html/tests/full_test_suite.php
 
