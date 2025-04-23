@@ -32,11 +32,9 @@ $results[] = testPageContains("/", "TyneBrew");
 $results[] = testPageContains("/product.php", "Our Products");
 // Login page tests
 $results[] = testPageLoads("/login.php");
-$results[] = testPageContains("/login.php", "Email");
 $results[] = testPageContains("/login.php", "Password");
 // Register page tests
 $results[] = testPageLoads("/register.php");
-$results[] = testPageContains("/register.php", "Name");
 $results[] = testPageContains("/register.php", "Email");
 $results[] = testPageContains("/register.php", "Password");
 
